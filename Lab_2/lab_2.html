@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_2.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(2.jpg) no-repeat;
+            -moz-background-size: 100%;
+            -webkit-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
+           }
+        </style>
+</head>
+<body>
+    <main>
+        <font color="white"><h1>Форма обратной связи</h1></font>
+        <form action="https://httpbin.org/post" method="POST">
+            <div class="form_group">
+                <label for="name">ФИО</label>
+            <input type="text" name="name" id="name" required value="Донец В. А.">
+            </div>
+            <div class="form_group">
+                <label for="name">email</label>
+            <input type="email" name="email" id="email">
+            </div>
+            <div class="form_group">
+                <label for="message">Ваше сообщение</label>
+                <textarea name="message" if="message" cols="30" rows="10">Введите текст</textarea>
+            </div>
+            <div class="form_group">
+                <p class="form_label">Как Вы узнали о нас?</p>
+                <label for="block">Реклама в интернете</label>
+                <input type="radio" name="source" id="block" value="block">
+                <label for="friends">Знакомые</label>
+                <input type="radio" name="source" id="friends" value="friends">
+            </div>
+            <div class="form_group">
+                <label class="form_group" for="">Категория обращения</label>
+                <select name="category" id="category">
+                    <option value="propose">Предложение</option>
+                    <option value="grievance">Жалоба</option>
+                </select>
+            </div>
+            <div class="form_group">
+                <input type="file" name="attechment" id="attechment">
+                <label for="attechment">Выберите файл</label>
+            </div>
+            <div class="form_group">
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement">Соглашение на обработку персональных данных</label>
+            </div>
+            <input class="btn" type="submit" value="Отправить">
+        </form>
+    </main>
+</body>
+</html>
